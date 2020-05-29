@@ -1,0 +1,25 @@
+.u-wp {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1210px;
+  padding: 0 20px;
+}
+
+.u-dfBtw {
+  display: flex;
+  justify-content: space-between;
+}
+
+.u-dfStart {
+  display: flex;
+  justify-content: start;
+}
+
+.u-dfBtwCenter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.u-w100p {
+  width: 100%;
+}

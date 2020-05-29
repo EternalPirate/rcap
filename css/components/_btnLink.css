@@ -1,0 +1,24 @@
+:root {
+  --BtnLink-color: #444444;
+}
+
+
+
+.rcap-BtnLink {
+  background: none;
+  border: none;
+  padding: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--BtnLink-color);
+  text-decoration: underline;
+  transition: all 100ms linear;
+}
+
+.rcap-BtnLink:hover {
+  opacity: .9;
+}
+
+.rcap-BtnLink:active {
+  opacity: .8;
+}

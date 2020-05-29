@@ -1,0 +1,121 @@
+:root {
+  --Select-fontSize: 16px;
+  --Select-big-fontSize: 17px;
+  --Select-color: #22232B;
+  --Select--o-color: #6C46B9;
+  --Select-option-onHove-background: #fbfbfb;
+  --Select-option--o-onHove-color: #22232B;
+  --Select-borderBottomColor: rgba(27, 27, 27, 0.1);
+}
+
+.rcap-Select {
+  font-size: var(--Select-fontSize);
+  color: var(--Select-color);
+  border: none;
+  border-bottom: 1px solid var(--Select-borderBottomColor);
+  position: relative;
+  display: block;
+}
+
+.rcap-Select-big {
+  font-size: var(--Select-big-fontSize);
+}
+
+.rcap-Select--o {
+  color: var(--Select--o-color);
+  border-bottom: none;
+}
+
+.rcap-Select-current {
+  position: relative;
+  cursor: pointer;
+  outline: none;
+}
+
+.rcap-Select-current:focus + .rcap-Select-list {
+  opacity: 1;
+  animation-name: none;
+}
+
+.rcap-Select-current:focus + .rcap-Select-list .rcap-Select-option {
+  cursor: pointer;
+}
+
+.rcap-Select-current:focus .rcap-Select-icon {
+  -webkit-transform: translateY(-50%) rotate(180deg);
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.rcap-Select-icon {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 8px;
+  transition: 0.2s ease;
+}
+
+.rcap-Select-icon--big {
+  width: 14px;
+}
+
+.rcap-Select-value {
+  display: -webkit-box;
+  display: flex;
+}
+
+.rcap-Select-input {
+  display: none;
+}
+
+.rcap-Select-input:checked + .rcap-Select-input-text {
+  display: block;
+}
+
+.rcap-Select-input-text {
+  display: none;
+  width: 100%;
+  margin: 0;
+  padding: 12px 35px 12px 0;
+}
+
+.rcap-Select-list {
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  padding: 0;
+  list-style: none;
+  opacity: 0;
+  animation-name: HideList;
+  animation-duration: 0.5s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: step-start;
+  box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.1);
+}
+
+.rcap-Select-option {
+  display: block;
+  padding: 15px;
+  background-color: #fff;
+}
+
+.rcap-Select-option:hover,
+.rcap-Select-option:focus {
+  color: var(--primary-color);
+  background-color: var(--Select-option-onHove-background);
+}
+
+.rcap-Select-option--o:hover,
+.rcap-Select-option--o:focus {
+  color: var(--Select-option--o-onHove-color);
+}
+
+@keyframes HideList {
+  from {
+    transform: scaleY(1);
+  }
+  to {
+    transform: scaleY(0);
+  }
+}

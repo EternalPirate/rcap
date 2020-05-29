@@ -1,0 +1,54 @@
+:root {
+  --CheckBox-label-background: #E0E0E0;
+  --CheckBox-label-boxShadow: 0 8px 8px rgba(67, 66, 93, 0.03);
+  --CheckBox-input-borderColor: #FFFFFF;
+}
+
+
+.rcap-CheckBox {
+  display: block;
+}
+
+.rcap-CheckBox input {
+  padding: 0;
+  height: initial;
+  width: initial;
+  margin-bottom: 0;
+  display: none;
+  cursor: pointer;
+}
+
+.rcap-CheckBox label {
+  position: relative;
+  cursor: pointer;
+}
+
+.rcap-CheckBox label:before {
+  background: var(--CheckBox-label-background);
+  box-shadow: var(--CheckBox-label-boxShadow);
+  content:'';
+  padding: 13px;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  cursor: pointer;
+  margin: -2px 25px 0 0;
+  border-radius: 5px;
+}
+
+.rcap-CheckBox input:checked + label:before {
+  background: var(--primary-gradient);
+}
+
+.rcap-CheckBox input:checked + label:after {
+  border: solid var(--CheckBox-input-borderColor);
+  content: '';
+  display: block;
+  position: absolute;
+  top: 6px;
+  left: 9px;
+  width: 5px;
+  height: 8px;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
