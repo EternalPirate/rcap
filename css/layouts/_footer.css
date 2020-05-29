@@ -20,8 +20,22 @@
   padding: 29px 0;
 }
 
-.rcap-Footer-wp {
+.rcap-Footer-desktop {
   display: flex;
+}
+
+.rcap-Footer-mobile {
+  display: none;
+}
+
+.rcap-Footer-mobile-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rcap-Footer-mobile-bottom {
+
 }
 
 .rcap-Footer-item {
@@ -70,4 +84,22 @@
 
 .rcap-Footer-social {
   padding: 0 22px;
+}
+
+@media (max-width: 1250px) {
+  .rcap-Footer-desktop {
+    display: none;
+  }
+
+  .rcap-Footer-mobile {
+    display: block;
+  }
+
+  .rcap-Footer-social {
+    padding: 0;
+  }
+
+  .rcap-Footer-social img {
+    height: 16px;
+  }
 }

@@ -52,3 +52,19 @@
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
 }
+
+@media (max-width: 1250px) {
+  .rcap-CheckBox label {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    font-size: 13px;
+  }
+  .rcap-CheckBox label:before {
+    margin: 0 0 8px;
+  }
+  .rcap-CheckBox input:checked + label:after {
+    left: 50%;
+    margin: 0 0 0 -2.5px;
+  }
+}

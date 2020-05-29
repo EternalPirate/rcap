@@ -56,3 +56,14 @@
 .rcap-Btn--icon--rect {
   border-radius: 10px;
 }
+
+
+
+@media (max-width: 1250px) {
+  .rcap-Btn--signIn span {
+    display: none;
+  }
+  .rcap-Btn--signIn img {
+    margin: -4px 0 0 0;
+  }
+}

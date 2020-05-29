@@ -12,6 +12,8 @@
 <body>
 <header class="rcap-Header">
     <div class="rcap-Header-top u-wp">
+        <button class="rcap-Btn rcap-Header-top-menu"><img src="./img/icons/menu.svg" alt="menu"></button>
+
         <a href="#" class="rcap-Logo">
             <figure class="rcap-Logo-figure">
                 <img class="rcap-Logo-figure-img" src="./img/icons/logo.svg" alt="logo">
@@ -20,7 +22,7 @@
         </a>
 
         <div class="rcap-Header-top-right">
-            <nav class="rcap-Nav">
+            <nav class="rcap-Nav rcap-Header-top-right-nav">
                 <a href="#" class="rcap-Nav-item is-active">Vehicles</a>
                 <a href="#" class="rcap-Nav-item">FAQs</a>
                 <a href="#" class="rcap-Nav-item">Contact us <sup class="rcap-Nav-item-easteregg">arabic</sup></a>
@@ -99,18 +101,18 @@
 
         <div class="rcap-Header-bottom-favorite">
             <button class="rcap-Btn rcap-Btn--icon"><img src="./img/icons/star-fill.svg" alt="star-fill"></button>
-            Show Favorites
+            <span>Show Favorites</span>
         </div>
 
-        <div class="rcap-CheckBox">
+        <div class="rcap-CheckBox rcap-Header-bottom-checkBox">
             <input type="checkbox" id="LiveAuctions">
             <label for="LiveAuctions">Live Auctions</label>
         </div>
-        <div class="rcap-CheckBox">
+        <div class="rcap-CheckBox rcap-Header-bottom-checkBox">
             <input type="checkbox" id="ComingSoon">
             <label for="ComingSoon">Coming Soon</label>
         </div>
-        <div class="rcap-CheckBox">
+        <div class="rcap-CheckBox rcap-Header-bottom-checkBox">
             <input type="checkbox" id="EndedAuctions">
             <label for="EndedAuctions">Ended Auctions</label>
         </div>
@@ -921,30 +923,56 @@
 </main>
 
 <footer class="rcap-Footer">
-    <div class="rcap-Footer-wp u-wp">
-        <div class="rcap-Footer-item rcap-Footer-item--logo">
-            <a href="#" class="rcap-Logo">
-                <figure class="rcap-Logo-figure">
-                    <img class="rcap-Logo-figure-img" src="./img/icons/logo.svg" alt="logo">
-                    <figcaption class="rcap-Logo-figure-caption"><b class="rcap-Logo-figure-caption-title">CarMazad</b>House of Vehicles</figcaption>
-                </figure>
-            </a>
+    <div class="u-wp">
+        <div class="rcap-Footer-desktop">
+            <div class="rcap-Footer-item rcap-Footer-item--logo">
+                <a href="#" class="rcap-Logo">
+                    <figure class="rcap-Logo-figure">
+                        <img class="rcap-Logo-figure-img" src="./img/icons/logo.svg" alt="logo">
+                        <figcaption class="rcap-Logo-figure-caption"><b class="rcap-Logo-figure-caption-title">CarMazad</b>House of Vehicles</figcaption>
+                    </figure>
+                </a>
+            </div>
+
+            <div class="rcap-Footer-item rcap-Footer-item--links rcap-Footer-item--around">
+                <a href="#" class="rcap-Footer-link">TERMS & CONDITIONS</a>
+                <a href="#" class="rcap-Footer-link">PRIVACY POLICY</a>
+                <a href="#" class="rcap-Footer-link">FAQS</a>
+            </div>
+
+            <div class="rcap-Footer-item rcap-Footer-item--links">
+                Questions?&nbsp;<a href="mailto:support@CARmazad.com" class="rcap-Footer-mail">support@CARmazad.com</a>
+            </div>
+
+            <div class="rcap-Footer-item rcap-Footer-item--around">
+                <a href="#" class="rcap-Footer-social"><img src="./img/icons/instagram.svg" alt="instagram"></a>
+                <a href="#" class="rcap-Footer-social"><img src="./img/icons/facebook.svg" alt="facebook"></a>
+                <a href="#" class="rcap-Footer-social"><img src="./img/icons/twitter.svg" alt="twitter"></a>
+            </div>
         </div>
 
-        <div class="rcap-Footer-item rcap-Footer-item--links rcap-Footer-item--around">
-            <a href="#" class="rcap-Footer-link">TERMS & CONDITIONS</a>
-            <a href="#" class="rcap-Footer-link">PRIVACY POLICY</a>
-            <a href="#" class="rcap-Footer-link">FAQS</a>
-        </div>
+        <div class="rcap-Footer-mobile">
+            <div class="rcap-Footer-mobile-top">
+                <a href="#" class="rcap-Logo">
+                    <figure class="rcap-Logo-figure">
+                        <img class="rcap-Logo-figure-img" src="./img/icons/mobile-logo.svg" alt="mobile-logo">
+                    </figure>
+                </a>
 
-        <div class="rcap-Footer-item rcap-Footer-item--links">
-            Questions?&nbsp;<a href="mailto:support@CARmazad.com" class="rcap-Footer-mail">support@CARmazad.com</a>
-        </div>
+                <a href="#" class="rcap-Footer-social"><img src="./img/icons/instagram.svg" alt="instagram"></a>
+                <a href="#" class="rcap-Footer-social"><img src="./img/icons/facebook.svg" alt="facebook"></a>
+                <a href="#" class="rcap-Footer-social"><img src="./img/icons/twitter.svg" alt="twitter"></a>
 
-        <div class="rcap-Footer-item rcap-Footer-item--around">
-            <a href="#" class="rcap-Footer-social"><img src="./img/icons/instagram.svg" alt="instagram"></a>
-            <a href="#" class="rcap-Footer-social"><img src="./img/icons/facebook.svg" alt="facebook"></a>
-            <a href="#" class="rcap-Footer-social"><img src="./img/icons/twitter.svg" alt="twitter"></a>
+                <a href="mailto:support@CARmazad.com" class="rcap-Btn rcap-Btn--outline"><img src="./img/icons/email.svg" alt="email"></a>
+            </div>
+
+            <div class="rcap-Footer-mobile-bottom">
+                <div>
+                    <a href="#" class="rcap-Footer-link">TERMS & CONDITIONS</a>
+                    <a href="#" class="rcap-Footer-link">PRIVACY POLICY</a>
+                </div>
+                <a href="#" class="rcap-Footer-link">FAQS</a>
+            </div>
         </div>
     </div>
 </footer>

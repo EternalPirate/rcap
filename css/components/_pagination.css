@@ -6,3 +6,13 @@
   justify-content: space-between;
   margin-top: 45px;
 }
+
+@media (max-width: 1250px) {
+  .rcap-Pagination {
+    margin-top: 0;
+  }
+
+  .rcap-Pagination button:nth-child(n+6):not(:last-child) {
+    display: none;
+  }
+}

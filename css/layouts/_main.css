@@ -31,3 +31,26 @@
 .rcap-Main-wp-article-wp-item {
   width: 32%;
 }
+
+@media (max-width: 1250px) {
+  .rcap-Main {
+    padding: 24px 0 28px;
+  }
+
+  .rcap-Main-wp-aside {
+    display: none;
+  }
+
+  .rcap-Main-wp-article {
+    width: 100%;
+    padding-left: 0;
+  }
+
+  .rcap-Main-wp-article-wp-item {
+    width: 100%;
+  }
+
+  .rcap-Main-wp-article-wp {
+    flex-wrap: wrap;
+  }
+}
