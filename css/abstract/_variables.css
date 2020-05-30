@@ -1,7 +1,0 @@
-:root {
-  /*App colors*/
-  --primary-color: #6b1d57;
-  --primary-gradient: linear-gradient(45deg,  #33176c 0%,#6b1d57 100%);
-  --accent-color: #8fb946;
-  --accent-gradient: linear-gradient(to right, #74b946 0%,#8fb946 100%);
-}

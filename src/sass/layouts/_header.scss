@@ -1,0 +1,70 @@
+$--Header-backgroundColor: #ffffff;
+
+.rcap-Header {
+  background: $--Header-backgroundColor;
+  padding: px2vw-lg(32px) 0 px2vw-lg(20px);
+
+  &-top {
+    @extend %u-dfCenterBtw;
+    margin-bottom: px2vw-lg(39px);
+  }
+
+  &-top-right {
+    @extend %u-dfCenterBtw;
+  }
+
+  &-middle {
+    @extend %u-dfEndBtw;
+    margin-bottom: px2vw-lg(31px);
+  }
+
+  &-middle-search {
+    @extend %u-dfEndBtw;
+    width: 100%;
+    max-width: px2vw-lg(875px);
+  }
+
+  &-middle-sort {
+    width: 100%;
+    max-width: px2vw-lg(110px);
+    margin-right: px2vw-lg(23px);
+  }
+
+  &-middle-view {
+    align-self: center;
+    padding: px2vw-lg(7px) 0 0;
+  }
+
+  &-middle-view button:first-child {
+    margin-right: px2vw-lg(30px);
+  }
+
+  &-middle-search-btn {
+    margin-right: px2vw-lg(40px);
+  }
+
+  &-middle-search-input {
+
+  }
+
+  &-bottom {
+    @extend %u-dfCenterBtw;
+  }
+
+  &-bottom-type {
+    max-width: px2vw-lg(160px);
+    width: 100%;
+  }
+
+  &-bottom-favorite {
+    @extend %u-dfCenterBtw;
+  }
+
+  &-bottom-favorite button {
+    margin-right: px2vw-lg(16px);
+  }
+}
+
+
+
+

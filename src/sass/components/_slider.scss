@@ -1,0 +1,13 @@
+.rcap-Slider {
+
+  &-label {
+    padding: px2vw-lg(10px) 0 px2vw-lg(10px);
+  }
+
+  &-range {
+  }
+
+  &-range-values {
+    @extend %u-dfBtw;
+  }
+}

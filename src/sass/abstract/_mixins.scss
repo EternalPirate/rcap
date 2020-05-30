@@ -1,0 +1,27 @@
+// Large devices
+@mixin lg {
+    @media (max-width: #{$screen-lg}px) {
+        @content;
+    }
+}
+
+// Small devices
+@mixin sm {
+    @media (max-width: #{$screen-sm}px) {
+        @content;
+    }
+}
+
+
+
+// Button events
+@mixin btnEvents() {
+    &:hover  {
+        opacity: .9;
+    }
+
+    &:active {
+        opacity: .8;
+        box-shadow: none;
+    }
+}

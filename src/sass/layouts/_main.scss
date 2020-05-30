@@ -1,0 +1,27 @@
+$--Main-background: #F6F8FD url("../../images/backgrounds/bg.svg") 102% px2vw-lg(77px) no-repeat;
+
+.rcap-Main {
+  background: $--Main-background;
+  padding: px2vw-lg(24px) 0 px2vw-lg(102.5px);
+
+  &-wp {
+    @extend %u-dfStartBtw;
+  }
+
+  &-wp-aside {
+    width: 24%;
+  }
+
+  &-wp-article {
+    width: 76%;
+    padding-left: px2vw-lg(29px);
+  }
+
+  &-wp-article-wp {
+    @extend %u-dfStartBtw;
+  }
+
+  &-wp-article-wp-item {
+    width: 32%;
+  }
+}

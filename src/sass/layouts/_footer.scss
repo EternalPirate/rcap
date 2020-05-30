@@ -1,0 +1,69 @@
+$--Footer-background: #FFFFFF;
+$--Footer-borderColor: #E6E6E6;
+
+$--Footer-item-borderColor: #EBEBEB;
+
+$--Footer-link-color: #22232B;
+$--Footer-link-onHover-color: #6C46B9;
+
+$--Footer-mail-color: #6C46B9;
+$--Footer-mail-onHover-color: #22232B;
+
+
+.rcap-Footer {
+  background: $--Footer-background;
+  border: px2vw-lg(1px) solid $--Footer-borderColor;
+  text-transform: uppercase;
+  font-size: px2vw-lg(10px);
+  padding: px2vw-lg(29px) 0;
+
+  &-wp {
+    display: flex;
+  }
+
+  &-item {
+    @extend %u-dfCenterCenter;
+    border-right: px2vw-lg(1px) solid $--Footer-item-borderColor;
+    position: relative;
+    text-align: center;
+  }
+
+  &-item--logo {
+    padding: 0 px2vw-lg(26px) 0 px2vw-lg(126px);
+  }
+
+  &-item--around {
+    justify-content: space-around;
+  }
+
+  &-item--links {
+    padding: 0 px2vw-lg(31px);
+  }
+
+  &-item:last-child {
+    border-right: none;
+  }
+
+  &-link {
+    color: $--Footer-link-color;
+    padding: 0 px2vw-lg(20px);
+    text-decoration: none;
+  }
+
+  &-link:hover {
+    color: $--Footer-link-onHover-color;
+  }
+
+  &-mail {
+    color: $--Footer-mail-color;
+    font-weight: 600;
+  }
+
+  &-mail:hover {
+    color: $--Footer-mail-onHover-color;
+  }
+
+  &-social {
+    padding: 0 px2vw-lg(22px);
+  }
+}

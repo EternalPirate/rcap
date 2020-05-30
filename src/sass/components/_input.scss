@@ -1,0 +1,28 @@
+$--Input-fontSize: px2vw-lg(17px);
+$--Input-color: #22232B;
+$--Input-placeholder-color: #22232B;
+$--Input-borderBottomColor: rgba(27, 27, 27, 0.1);
+$--Input-onFocus-borderBottomColor: #1B1B1B;
+
+
+
+.rcap-Input {
+  font-size: $--Input-fontSize;
+  color: $--Input-color;
+  border: none;
+  border-bottom: px2vw-lg(1px) solid $--Input-borderBottomColor;
+  font-family: 'Poppins', sans-serif;
+  padding: px2vw-lg(8px) 0;
+  width: 100%;
+
+  &::placeholder {
+    color: $--Input-placeholder-color;
+    opacity: 1;
+  }
+
+  &:focus {
+    border-bottom: px2vw-lg(1px) solid $--Input-onFocus-borderBottomColor;
+  }
+}
+
+

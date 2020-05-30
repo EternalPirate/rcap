@@ -1,0 +1,125 @@
+$--Select-big-fontSize: px2vw-lg(17px);
+
+$--Select-fontSize: px2vw-lg(16px);
+$--Select-color: #22232B;
+
+$--Select--o-color: #6C46B9;
+
+$--Select-option-onHove-background: #fbfbfb;
+$--Select-option--o-onHove-color: #22232B;
+
+$--Select-borderBottomColor: rgba(27, 27, 27, 0.1);
+
+
+
+
+.rcap-Select {
+  font-size: $--Select-fontSize;
+  color: $--Select-color;
+  border: none;
+  border-bottom: px2vw-lg(1px) solid $--Select-borderBottomColor;
+  position: relative;
+  display: block;
+
+  &-big {
+    font-size: $--Select-big-fontSize;
+  }
+
+  &--o {
+    color: $--Select--o-color;
+    border-bottom: none;
+  }
+
+  &-current {
+    position: relative;
+    cursor: pointer;
+    outline: none;
+  }
+
+  &-current:focus + &-list {
+    opacity: 1;
+    animation-name: none;
+  }
+
+  &-current:focus + &-list &-option {
+    cursor: pointer;
+  }
+
+  &-current:focus &-icon {
+    -webkit-transform: translateY(-50%) rotate(180deg);
+    transform: translateY(-50%) rotate(180deg);
+  }
+
+  &-icon {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: px2vw-lg(8px);
+    transition: 0.2s ease;
+  }
+
+  &-icon--big {
+    width: px2vw-lg(14px);
+  }
+
+  &-value {
+    display: flex;
+  }
+
+  &-input {
+    display: none;
+  }
+
+  &-input:checked + &-input-text {
+    display: block;
+  }
+
+  &-input-text {
+    display: none;
+    width: 100%;
+    margin: 0;
+    padding: px2vw-lg(12px) px2vw-lg(35px) px2vw-lg(12px) 0;
+  }
+
+  &-list {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    padding: 0;
+    list-style: none;
+    opacity: 0;
+    animation-name: HideList;
+    animation-duration: 0.5s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: step-start;
+    box-shadow: 0 px2vw-lg(15px) px2vw-lg(30px) -px2vw-lg(10px) rgba(0, 0, 0, 0.1);
+  }
+
+  &-option {
+    display: block;
+    padding: px2vw-lg(15px);
+    background-color: #fff;
+  }
+
+  &-option:hover,
+  &-option:focus {
+    color: $--primary-color;
+    background-color: $--Select-option-onHove-background;
+  }
+
+  &-option--o:hover,
+  &-option--o:focus {
+    color: $--Select-option--o-onHove-color;
+  }
+}
+
+@keyframes HideList {
+  from {
+    transform: scaleY(1);
+  }
+  to {
+    transform: scaleY(0);
+  }
+}

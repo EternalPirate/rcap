@@ -1,0 +1,91 @@
+$--BtnFill-color: #383B48;
+
+$--BtnFill-icon--select-borderColor: #FFFFFF;
+
+$--BtnFill-primary-color: #FFFFFF;
+$--BtnFill-primary-boxShadow: 0 px2vw-lg(8px) px2vw-lg(8px) rgba(67, 66, 93, 0.25);
+
+$--BtnFill-accent-color: #FFFFFF;
+
+
+
+.rcap-BtnFill {
+  @include btnEvents();
+  color: $--BtnFill-color;
+  background: none;
+  border: none;
+  padding: 0;
+  height: px2vw-lg(42px);
+  line-height: px2vw-lg(42px);
+  min-width: px2vw-lg(42px);
+  font-size: px2vw-lg(13px);
+  font-weight: 600;
+  border-radius: px2vw-lg(3px);
+  position: relative;
+  transition: $btnTransition;
+
+  &--search {
+    height: px2vw-lg(49px);
+    line-height: px2vw-lg(49px);
+    border-radius: px2vw-lg(6px);
+    font-size: px2vw-lg(14px);
+  }
+
+  &--view {
+    height: px2vw-lg(28px);
+    line-height: px2vw-lg(28px);
+    border-radius: px2vw-lg(3px);
+    font-size: px2vw-lg(11px);
+  }
+
+  &-icon {
+    position: absolute;
+    left: px2vw-lg(20px);
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+
+  &-icon--select {
+    left: initial;
+    right: px2vw-lg(20px);
+  }
+
+  &-icon--select:after {
+    border-bottom: px2vw-lg(2px) solid $--BtnFill-icon--select-borderColor;
+    border-left: px2vw-lg(2px) solid $--BtnFill-icon--select-borderColor;
+    content: '';
+    display: inline-block;
+    width: px2vw-lg(4px);
+    height: px2vw-lg(4px);
+    position: relative;
+    top: px2vw-lg(-2px);
+    transform: rotate(-45deg);
+  }
+
+  &--view.is-active &-icon--select:after {
+    border-bottom-color: $--accent-color;
+    border-left-color: $--accent-color;
+    top: 0;
+    transform: rotate(135deg);
+  }
+
+  &[data-color="primary"] {
+    background: $--primary-gradient;
+    color: $--BtnFill-primary-color;
+    box-shadow: $--BtnFill-primary-boxShadow;
+  }
+
+  &[data-color="accent"] {
+    background: $--accent-gradient;
+    color: $--BtnFill-accent-color;
+    border: px2vw-lg(1px) solid $--accent-color;
+  }
+
+  &[data-color="accent"].is-active {
+    color: $--accent-color;
+    background: none;
+  }
+}
+
+

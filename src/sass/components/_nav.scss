@@ -1,0 +1,42 @@
+$--NavItem-color: #22232B;
+$--NavItem-fontSize: px2vw-lg(14px);
+
+
+
+.rcap-Nav {
+  margin-right: px2vw-lg(22px);
+
+  &-item {
+    color: $--NavItem-color;
+    font-size: $--NavItem-fontSize;
+    font-weight: 700;
+    text-transform: uppercase;
+    position: relative;
+    text-decoration: none;
+    padding: px2vw-lg(10px) px2vw-lg(21px);
+  }
+
+  &-item.is-active {
+    color: $--primary-color;
+  }
+
+  &-item.is-active:after {
+    background: $--primary-color;
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%);
+    width: 50%;
+    height: px2vw-lg(2px);
+  }
+
+  &-item:hover {
+    color: $--primary-color;
+  }
+
+  &-item-easteregg {
+    font-size: px2vw-lg(1px);
+    vertical-align: top;
+  }
+}

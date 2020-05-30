@@ -1,0 +1,15 @@
+$--BtnLink-color: #444444;
+
+
+
+.rcap-BtnLink {
+  @include btnEvents();
+  background: none;
+  border: none;
+  padding: px2vw-lg(12px);
+  font-size: px2vw-lg(14px);
+  font-weight: 600;
+  color: $--BtnLink-color;
+  text-decoration: underline;
+  transition: $btnTransition;
+}

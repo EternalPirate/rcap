@@ -1,0 +1,47 @@
+$--Filter-background: #FFFFFF;
+$--Filter-after-background: #FFFFFF;
+
+
+.rcap-Filter {
+  background: $--Filter-background;
+  border-radius: px2vw-lg(6px);
+  padding: px2vw-lg(25px) px2vw-lg(25px) px2vw-lg(13px);
+  position: sticky;
+  top: px2vw-lg(10px);
+
+  &:after {
+    background: $--Filter-after-background;
+    content: "";
+    position: absolute;
+    z-index: 1;
+    right: px2vw-lg(-10px);
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    width: px2vw-lg(24px);
+    height: px2vw-lg(24px);
+    border-top-right-radius: px2vw-lg(3px);
+  }
+
+  &-item {
+    margin-bottom: px2vw-lg(10px);
+  }
+
+  &-item--two {
+    @extend %u-dfBtw;
+  }
+
+  &-item-select {
+    flex: 1;
+  }
+
+  &-item--two &-item-select:nth-child(odd) {
+    margin-right: px2vw-lg(17px);
+  }
+
+  &-buttons {
+    display: flex;
+    flex-flow: column;
+    margin-top: px2vw-lg(25px);
+  }
+}
+

@@ -1,0 +1,140 @@
+$--CarCard-background: #ffffff;
+$--CarCard-boxShadow: px2vw-lg(6px) px2vw-lg(12px) px2vw-lg(24px) rgba(68, 68, 68, 0.08);
+
+$--CarCard-item-color: #45454D;
+$--CarCard-item-borderColor: #EBEBEB;
+
+$--CarCard-date-background: linear-gradient(to right, #b94646 0%,#e73054 100%);
+$--CarCard-date-color: #ffffff;
+
+$--CarCard-img-btn-boxShadow: 0 0 px2vw-lg(15px) rgba(163, 117, 255, 0.71);
+
+$--CarCard-title-color: #45454D;
+
+
+
+.rcap-CarCard {
+  background: $--CarCard-background;
+  box-shadow: $--CarCard-boxShadow;
+  padding: px2vw-lg(8px) px2vw-lg(8px) px2vw-lg(15px);
+  border-radius: px2vw-lg(6px);
+  margin-bottom: px2vw-lg(19px);
+
+  &-item {
+    color: $--CarCard-item-color;
+    border-bottom: px2vw-lg(1px) solid $--CarCard-item-borderColor;
+    padding: px2vw-lg(10px) px2vw-lg(6px);
+    font-size: px2vw-lg(14px);
+    position: relative;
+  }
+
+  &-item.no-border {
+    border: none;
+  }
+
+  &-item--two {
+    border-bottom: none;
+  }
+
+  &-item--two:after {
+    background: $--CarCard-item-borderColor;
+    content: "";
+    border-bottom: none;
+    width: px2vw-lg(1px);
+    height: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &-item-img {
+    margin-right: px2vw-lg(11px);
+
+  }
+
+  &-item-info {
+    font-size: px2vw-lg(11px);
+  }
+
+  &-item-info-date {
+    margin-bottom: px2vw-lg(3px);
+  }
+
+  &-item-info-date img {
+    width: px2vw-lg(12px);
+    margin-right: px2vw-lg(10px);
+  }
+
+  &-item-info-title {
+    font-size: px2vw-lg(14px);
+    font-weight: 600;
+  }
+
+  &-item-info-title span {
+    display: inline-block;
+    width: px2vw-lg(12px);
+    margin-right: px2vw-lg(10px);
+  }
+
+  &-item-title {
+    font-size: px2vw-lg(19px);
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 700;
+  }
+
+  &-item-title span {
+    color: $--accent-color;
+    font-size: px2vw-lg(13px);
+    font-weight: 400;
+  }
+
+  &-date {
+    color: $--CarCard-date-color;
+    background: $--CarCard-date-background;
+    padding: px2vw-lg(8px) 0;
+    text-align: center;
+    border-radius: px2vw-lg(3px);
+    font-size: px2vw-lg(11px);
+    font-weight: 500;
+    margin-bottom: px2vw-lg(8px);
+  }
+
+  &-img {
+    @extend %u-dfEndBtw;
+    flex-flow: column;
+    background-size: cover !important;
+    width: 100%;
+    height: px2vw-lg(208px);
+    border-bottom-left-radius: px2vw-lg(15px);
+    border-bottom-right-radius: px2vw-lg(15px);
+    overflow: hidden;
+    padding: px2vw-lg(14px) px2vw-lg(8px) px2vw-lg(9px);
+    margin-bottom: px2vw-lg(7px);
+  }
+
+  &-img-btn {
+    box-shadow: $--CarCard-img-btn-boxShadow;
+  }
+
+  &-title {
+    color: $--CarCard-title-color;
+    font-size: px2vw-lg(17px);
+  }
+
+  &-title-name {
+    font-weight: 600;
+  }
+
+  &-title-year {
+    font-size: px2vw-lg(14px);
+  }
+
+  &-bids {
+    display: none;
+  }
+  &-bids.is-active {
+    display: block;
+  }
+
+}
